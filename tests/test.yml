@@ -1,23 +1,4 @@
-# - hosts: Ubuntu
-#   become: yes
-#   remote_user: vagrant
-#   gather_facts: yes
-  
-#   tasks:
-#     - include_role:
-#         name: ../../
-#       vars:
-#         input_role_os_distribution: "{{ ansible_distribution }}"
-#         input_role_ca_certificates:
-#         - name: "CA"
-#           certificate: |
-#             -----BEGIN CERTIFICATE-----
-#             -----END CERTIFICATE-----
-    
-#     - name: Test curl
-#       shell: curl https://localhost
-
-- hosts: CentOS, RedHat
+- hosts: Ubuntu, CentOS, RedHat
   become: yes
   remote_user: vagrant
   gather_facts: yes
@@ -27,7 +8,11 @@
         name: ../../
       vars:
         input_role_os_distribution: "{{ ansible_distribution }}"
-        input_role_ca_certificates: []
-        
+        input_role_ca_certificates:
+        - name: "CA"
+          certificate: |
+            -----BEGIN CERTIFICATE-----
+            -----END CERTIFICATE-----
+    
     - name: Test curl
-      shell: curl https://storage.rachuna-net.pl
+      shell: curl https://localhost

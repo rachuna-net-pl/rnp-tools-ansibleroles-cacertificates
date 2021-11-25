@@ -1,0 +1,5 @@
+input_role_ca_certificates: []
+#  - name: "CA-root"
+#    certificate: |
+#     -----BEGIN CERTIFICATE-----
+#     -----END CERTIFICATE-----

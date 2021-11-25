@@ -1,0 +1,8 @@
+- name: "[RedHat] Copy Certificates"
+  copy:
+    content: "{{ item.certificate }}"
+    dest: "{{ var_centos_certificate_path }}/{{ item.name }}.crt"
+  loop: "{{ input_role_ca_certificates}}"
+
+- name: "[RedHat] Update CA certificates"
+  shell: update-ca-trust extract

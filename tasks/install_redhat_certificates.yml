@@ -1,7 +1,7 @@
 - name: "[CentOS] Copy Certificates"
   copy:
     content: "{{ item.certificate }}"
-    dest: "{{ var_centos_certificate_path }}/{{ item.name }}.crt"
+    dest: "{{ var_rhel_certificate_path }}/{{ item.name }}.crt"
   loop: "{{ input_role_ca_certificates}}"
 
 - name: "[CentOS] Update CA certificates"

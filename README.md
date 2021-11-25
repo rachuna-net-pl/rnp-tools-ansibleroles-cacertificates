@@ -16,6 +16,11 @@ input_role_ca_certificates: []
 #     -----BEGIN CERTIFICATE-----
 #     -----END CERTIFICATE-----
 ```
+Role vars:
+```
+var_ubuntu_certificate_path: "/usr/local/share/ca-certificates/"
+var_centos_certificate_path: "/etc/pki/ca-trust/source/anchors/"
+```
 
 Example Playbook
 ----------------

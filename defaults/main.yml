@@ -1,3 +1,4 @@
+input_role_os_distribution: Ubuntu
 input_role_ca_certificates: []
 #  - name: "CA-root"
 #    certificate: |

@@ -1,0 +1,17 @@
+- name: "[Ubuntu] Install certificates"
+  include_tasks: install_ubuntu_certificates.yml
+  when:
+  - input_role_os_distribution == "Ubuntu"
+  - input_role_ca_certificates is defined and input_role_ca_certificates | length > 0
+
+- name: "[CentOS] Install packages"
+  include_tasks: install_centos_certificates.yml
+  when:
+  - input_role_os_distribution == "CentOS"
+  - input_role_ca_certificates is defined and input_role_ca_certificates | length > 0
+
+- name: "[RedHat] Install packages"
+  include_tasks: install_redhat_certificates.yml
+  when:
+  - input_role_os_distribution == "RedHat"
+  - input_role_ca_certificates is defined and input_role_ca_certificates | length > 0

@@ -1,0 +1,4 @@
+---
+var_ubuntu_certificate_path: "/usr/local/share/ca-certificates/"
+var_centos_certificate_path: "/etc/pki/ca-trust/source/anchors/"
+var_rhel_certificate_path: "/etc/pki/ca-trust/source/anchors/"

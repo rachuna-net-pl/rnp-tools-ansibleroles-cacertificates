@@ -1,0 +1,8 @@
+- name: "[Ubuntu] Copy Certificates"
+  copy:
+    content: "{{ item.certificate }}"
+    dest: "{{ var_ubuntu_certificate_path }}/{{ item.name }}.crt"
+  loop: "{{ input_role_ca_certificates}}"
+
+- name: "[Ubuntu] Update CA certificates"
+  shell: update-ca-certificates

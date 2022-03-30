@@ -1,8 +1,12 @@
 - name: "[Ubuntu] Copy Certificates"
+  changed_when: False
   copy:
     content: "{{ item.certificate }}"
     dest: "{{ var_ubuntu_certificate_path }}/{{ item.name }}.crt"
+    owner: root
+    mode: 0644
   loop: "{{ input_role_ca_certificates}}"
 
 - name: "[Ubuntu] Update CA certificates"
+  changed_when: False
   shell: update-ca-certificates

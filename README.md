@@ -1,7 +1,10 @@
 rnp-tools-ansibleroles-cacertificates
 =========
 
-Ansible Role - Install packages
+Ansible Role - Install CA certificate
+
+[Changelog](CHANGELOG.md)
+
 
 ![Overwiew](https://gitlab.com/rachuna-net.pl/tools/ansibleroles/rnp-tools-ansibleroles-cacertificates/-/raw/develop/docs/cacertificates.png)
 
